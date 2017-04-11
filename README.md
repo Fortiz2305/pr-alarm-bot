@@ -28,7 +28,7 @@ You have to add the following environment variables with your GitHub and Slack c
 
 It is algo possible to add these variables in the `config.py` file.
 
-Then, it is inly necessary to add a file, for instance `run.py` with the following information:
+Then, it is only necessary to add a file, for instance `run.py` with the following information:
 
 ```python
 from pralarm.github import GitHubIntegration
