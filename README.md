@@ -35,7 +35,7 @@ from pralarm.github import GitHubIntegration
 from pralarm.slack import SlackIntegration
 
 github_client = GitHubIntegration(GITHUB_USERNAME, GITHUB_PASSWORD)
-slack_client = SlackIntegratio(SLACK_TOKEN)
+slack_client = SlackIntegration(SLACK_TOKEN)
 
 older_pr = github_client.get_org_pull_requests_older_than_num_days(GITHUB_ORGANIZATION, num_days)
 
