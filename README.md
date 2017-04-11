@@ -28,9 +28,7 @@ You have to add the following environment variables with your GitHub and Slack c
 
 It is algo possible to add these variables in the `config.py` file.
 
-## Run the program
-
-It is only necessary to add a file, for instance `run.py` with the following information
+Then, it is inly necessary to add a file, for instance `run.py` with the following information:
 
 ```python
 from pralarm.github import GitHubIntegration
@@ -43,3 +41,13 @@ older_pr = github_client.get_org_pull_requests_older_than_num_days(GITHUB_ORGANI
 
 slack_client.send_message(SLACK_CHANNEL, your_message)
 ```
+
+## Run the program
+
+Open the command line and execute:
+
+```
+python3 run.py
+```
+
+This will send your message to your slack channel.
