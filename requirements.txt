@@ -1,0 +1,2 @@
+pygithub==1.34
+slackclient==1.0.5
