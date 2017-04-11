@@ -7,7 +7,6 @@ class GitHubIntegration:
     def __init__(self, username, password):
         self.username = username
         self.password = password
-        # self.github_service = github_service
 
     def get_org_pull_requests_older_than_num_days(self, organization_name, num_days):
         client = self._get_client()
