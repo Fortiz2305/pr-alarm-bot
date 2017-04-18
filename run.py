@@ -14,5 +14,8 @@ if __name__ == '__main__':
     slack_integration = SlackIntegration(SLACK_TOKEN)
 
     older_pr = github_integration.get_org_pull_requests_older_than_num_days(GITHUB_ORGANIZATION, 3)
-    message = "Badgers! These PR's are older than 3 days\n" + '\n'.join(older_pr)
+    if older_pr:
+        message = "Badgers! These PR's are older than 3 days\n" + '\n'.join(older_pr)
+    else:
+        message = "Yeah! We don't have any PR older than 3 days"
     slack_integration.send_message(SLACK_CHANNEL, message)
