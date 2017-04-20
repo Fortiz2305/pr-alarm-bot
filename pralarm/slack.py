@@ -40,4 +40,3 @@ class SlackIntegration:
             raise Exception(channel_name)
         else:
             raise Exception(channels_call)
-

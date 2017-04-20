@@ -26,8 +26,3 @@ class GitHubIntegration:
 
     def _get_client(self):
         return Github(self.username, self.password)
-
-
-
-
-
