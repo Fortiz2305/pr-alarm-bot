@@ -1,7 +1,6 @@
 from config import (
-    GITHUB_USERNAME,
-    GITHUB_PASSWORD,
     GITHUB_ORGANIZATION,
+    GITHUB_OAUTH_TOKEN,
     SLACK_CHANNEL,
     SLACK_TOKEN
 )
@@ -9,8 +8,9 @@ from config import (
 from pralarm.github import GitHubIntegration
 from pralarm.slack import SlackIntegration
 
+
 if __name__ == '__main__':
-    github_integration = GitHubIntegration(GITHUB_USERNAME, GITHUB_PASSWORD)
+    github_integration = GitHubIntegration(GITHUB_OAUTH_TOKEN)
     slack_integration = SlackIntegration(SLACK_TOKEN)
 
     older_pr = github_integration.get_org_pull_requests_older_than_num_days(GITHUB_ORGANIZATION, 3)
