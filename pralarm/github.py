@@ -4,7 +4,7 @@ from github import Github
 
 
 class GitHubIntegration:
-    def __init__(self, username, password, oauth_token):
+    def __init__(self, username=None, password=None, oauth_token=None):
         self.username = username
         self.password = password
         self.oauth_token = oauth_token
